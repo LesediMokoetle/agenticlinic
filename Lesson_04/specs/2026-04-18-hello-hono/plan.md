@@ -24,3 +24,13 @@
 
 1. Run `tsc --noEmit` and confirm zero errors
 2. Confirm the Hono `Context` and response types are inferred correctly in the handler
+
+## Task Group 5 — Layout Component and External CSS
+
+1. Create `src/components/Header.tsx` — brand link and nav placeholder
+2. Create `src/components/Footer.tsx` — copyright line
+3. Create `src/components/Layout.tsx` — wraps `<Header />`, a `<main>` children slot, and `<Footer />`; links `<head>` to the stylesheet
+4. Extract all inline styles into `static/styles.css`
+5. Serve `static/` via `serveStatic` from `@hono/node-server/serve-static`
+6. Rename `src/index.ts` → `src/index.tsx`; update dev script; update home page to render through `Layout`
+7. Confirm `tsc --noEmit` still exits clean
