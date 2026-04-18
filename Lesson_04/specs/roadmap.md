@@ -2,6 +2,8 @@
 
 Phases are intentionally small — each one is a shippable slice of work, independently reviewable and testable.
 
+**Baseline standard across all phases:** every page must be responsive. Base styles target mobile; a single breakpoint at `640px` covers tablet and desktop. No phase ships UI that breaks on small screens.
+
 ---
 
 ## Phase 1 — Hello Hono — complete
@@ -44,9 +46,9 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 - Mary's dashboard is now real
 
 ## Phase 9 — Polish & Accessibility
-- Responsive layout for Steve's modern-browser requirement
 - Semantic HTML audit
 - Keyboard navigation and focus styles
+- ARIA labels and screen-reader testing
 
 ## Phase 10 — Hardening
 - Error pages (404, 500)

@@ -20,9 +20,16 @@ Phase 1 is complete and mergeable when all of the following pass.
 4. **TypeScript is sound**
    - `tsc --noEmit` exits with code `0` and zero errors
 
+5. **Responsive layout**
+   - At viewport width ≤ 400px the page is readable with no horizontal scroll
+   - Header brand and nav stack vertically on small screens
+   - Content padding and heading size scale down on mobile
+
+6. **Tests pass**
+   - `npm test` exits with code `0` and zero failures
+   - Covers: `GET /` status 200, heading present, tagline present, stylesheet linked
+
 ## Out of Scope for This Phase
 
-- Shared layout components (header/nav/footer extracted into reusable components — Phase 2)
-- External stylesheet
 - Database connectivity
 - Any route other than `/`

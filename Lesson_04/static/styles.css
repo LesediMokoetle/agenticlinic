@@ -1,3 +1,8 @@
+:root {
+  --content-max: 960px;
+  --breakpoint-sm: 640px;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -18,15 +23,27 @@ body {
 header {
   background: #fff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1rem;
 }
 
 .header-inner {
-  max-width: 960px;
+  max-width: var(--content-max);
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media (min-width: 640px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .brand {
@@ -38,7 +55,8 @@ header {
 
 nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -55,21 +73,39 @@ nav a:hover {
 
 main {
   flex: 1;
-  max-width: 960px;
+  max-width: var(--content-max);
   width: 100%;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  main {
+    padding: 3rem 2rem;
+  }
 }
 
 main h1 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 640px) {
+  main h1 {
+    font-size: 2.5rem;
+  }
+}
+
 main p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #4a5568;
+}
+
+@media (min-width: 640px) {
+  main p {
+    font-size: 1.1rem;
+  }
 }
 
 /* ── Footer ── */
@@ -77,8 +113,14 @@ main p {
 footer {
   background: #fff;
   border-top: 1px solid #e2e8f0;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1rem;
   text-align: center;
   font-size: 0.875rem;
   color: #718096;
+}
+
+@media (min-width: 640px) {
+  footer {
+    padding: 1rem 2rem;
+  }
 }
