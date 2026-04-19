@@ -1,6 +1,9 @@
 # Changelog
 
 ## 2026-04-19
+- Implement Phase 3: appointment booking
+- Implement Phase 2: therapies catalog
+- Implement Phase 2 MVP: core data and pages
 - Add Vitest, responsive CSS, changelog skill, and update specs
 
 ## 2026-04-18

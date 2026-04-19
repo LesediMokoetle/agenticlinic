@@ -8,3 +8,7 @@ dist/
 
 # Local Claude Code settings
 .claude/settings.local.json
+
+# Stale / scratch files
+Lesson_04/src/index.ts
+TODO.md
