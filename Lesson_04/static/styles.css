@@ -367,3 +367,141 @@ footer {
   gap: 0.15rem;
   color: #2d3748;
 }
+
+/* ── Booking form ── */
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: #c53030;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1a202c;
+  background: #fff;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: 2px solid var(--brand-orange);
+  outline-offset: 1px;
+  border-color: var(--brand-orange);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.form-submit {
+  align-self: flex-start;
+  padding: 0.5rem 1.25rem;
+  background: var(--brand-orange);
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 400px) {
+  .form-submit {
+    width: 100%;
+  }
+}
+
+/* ── Appointment list (on agent detail) ── */
+
+.appointment-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.appointment-item a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.625rem 0.75rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.appointment-item a:hover {
+  background: #edf2f7;
+}
+
+.appointment-therapist {
+  font-weight: 600;
+  color: var(--brand-black);
+  flex: 1 1 auto;
+}
+
+.appointment-datetime {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+/* ── Appointment detail page ── */
+
+.appointment-detail {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 640px) {
+  .appointment-detail {
+    padding: 2rem;
+  }
+}
+
+.appointment-detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.appointment-detail-header h1 {
+  margin-bottom: 0;
+}

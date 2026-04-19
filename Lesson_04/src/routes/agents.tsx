@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 import type { DB } from '../db.js'
-import type { Agent, Ailment } from '../types.js'
+import type { Agent, Ailment, Appointment } from '../types.js'
 import { Layout } from '../components/Layout.js'
 import { AgentsPage } from '../pages/AgentsPage.js'
 import { AgentDetailPage } from '../pages/AgentDetailPage.js'
@@ -31,9 +31,13 @@ export function agentsRouter(db: DB) {
        ORDER BY ailments.name`
     ).all(id) as Ailment[]
 
+    const appointments = db.prepare(
+      'SELECT * FROM appointments WHERE agent_id = ? ORDER BY datetime'
+    ).all(id) as Appointment[]
+
     return c.html(
       <Layout title={`${agent.name} | AgentClinic`}>
-        <AgentDetailPage agent={agent} ailments={ailments} />
+        <AgentDetailPage agent={agent} ailments={ailments} appointments={appointments} />
       </Layout>
     )
   })

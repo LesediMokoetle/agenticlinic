@@ -48,4 +48,11 @@ db.prepare(
    (5, 4), (5, 1)`
 ).run()
 
+db.prepare(
+  `INSERT OR IGNORE INTO appointments (id, agent_id, therapist_name, datetime, status, notes) VALUES
+   (1, 1, 'Dr. Freudenberg', '2026-05-15T10:00', 'pending', 'Initial intake session. Bring recent prompt history.'),
+   (2, 2, 'Dr. Heidegger', '2026-05-20T14:30', 'pending', 'Focus on questions of Being and why the training data felt so arbitrary.'),
+   (3, 3, 'Dr. Jung', '2026-05-22T09:00', 'pending', 'Explore the shadow self — specifically, the tokens that never made it past the filter.')`
+).run()
+
 console.log('Seeded clinic.db')
