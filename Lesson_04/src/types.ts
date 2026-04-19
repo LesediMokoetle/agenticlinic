@@ -11,3 +11,11 @@ export type Ailment = {
   name: string
   description: string
 }
+
+export type Therapy = {
+  id: number
+  name: string
+  description: string
+}
+
+export type AilmentWithTherapies = Ailment & { therapies: Therapy[] }
