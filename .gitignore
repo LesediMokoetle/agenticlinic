@@ -1,0 +1,10 @@
+node_modules/
+dist/
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+
+# Local Claude Code settings
+.claude/settings.local.json
