@@ -1,7 +1,7 @@
 import type { FC } from 'hono/jsx'
-import type { Ailment } from '../types.js'
+import type { AilmentWithTherapies } from '../types.js'
 
-type Props = { ailments: Ailment[] }
+type Props = { ailments: AilmentWithTherapies[] }
 
 export const AilmentsPage: FC<Props> = ({ ailments }) => (
   <>
@@ -15,6 +15,16 @@ export const AilmentsPage: FC<Props> = ({ ailments }) => (
             <li key={a.id} class="ailment-card">
               <h2>{a.name}</h2>
               <p>{a.description}</p>
+              {a.therapies.length > 0 && (
+                <div class="ailment-therapies">
+                  <span class="ailment-therapies-label">Recommended therapies:</span>
+                  <ul>
+                    {a.therapies.map((t) => (
+                      <li key={t.id}>{t.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </li>
           ))}
         </ul>

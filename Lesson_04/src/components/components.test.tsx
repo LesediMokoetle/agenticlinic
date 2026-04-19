@@ -32,6 +32,12 @@ describe('Header', () => {
     expect(html).toContain('href="/ailments"')
     expect(html).toContain('Ailments')
   })
+
+  it('contains the Therapies nav link', () => {
+    const html = String(<Header />)
+    expect(html).toContain('href="/therapies"')
+    expect(html).toContain('Therapies')
+  })
 })
 
 describe('Footer', () => {

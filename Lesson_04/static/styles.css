@@ -296,3 +296,74 @@ footer {
   font-size: 0.9rem;
   color: #4a5568;
 }
+
+.ailment-therapies {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.ailment-therapies-label {
+  font-weight: 600;
+  color: #718096;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.ailment-therapies ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: #2d3748;
+}
+
+/* ── Therapies list ── */
+
+.therapy-cards {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.therapy-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.therapy-card h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brand-black);
+  margin-bottom: 0.375rem;
+}
+
+.therapy-card > p {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.therapy-ailments {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.therapy-ailments-label {
+  font-weight: 600;
+  color: #718096;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.therapy-ailments ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: #2d3748;
+}
