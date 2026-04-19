@@ -22,6 +22,7 @@ Tests live alongside source files (`*.test.ts` / `*.test.tsx`) and are run with 
 
 ## CSS Approach
 
+- **Brand colours**: orange (`#f97316`) and black (`#111111`), held in `--brand-orange` and `--brand-black` custom properties.
 - **Mobile-first**: base styles target small screens; `@media (min-width: 640px)` adds enhancements for tablet and desktop viewports.
 - CSS custom properties for shared values (e.g. `--content-max: 960px`).
 - No CSS framework — plain CSS with custom properties and media queries is sufficient at this scale.

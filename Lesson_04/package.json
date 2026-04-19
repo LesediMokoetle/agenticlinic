@@ -2,17 +2,21 @@
   "name": "agentclinic",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.tsx",
+    "seed": "tsx src/seed.ts",
     "test": "vitest run"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.14",
+    "better-sqlite3": "^12.9.0",
     "hono": "^4.12.14"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^25.6.0",
     "tsx": "^4.21.0",
     "typescript": "^5.5.3",

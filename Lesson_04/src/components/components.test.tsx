@@ -21,11 +21,16 @@ describe('Header', () => {
     expect(html).toContain('AgentClinic')
   })
 
-  it('contains the nav links', () => {
+  it('contains the Agents nav link', () => {
     const html = String(<Header />)
-    expect(html).toContain('Home')
-    expect(html).toContain('About')
-    expect(html).toContain('Contact')
+    expect(html).toContain('href="/agents"')
+    expect(html).toContain('Agents')
+  })
+
+  it('contains the Ailments nav link', () => {
+    const html = String(<Header />)
+    expect(html).toContain('href="/ailments"')
+    expect(html).toContain('Ailments')
   })
 })
 

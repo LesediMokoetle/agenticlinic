@@ -1,9 +1,12 @@
-import type { FC, PropsWithChildren } from 'hono/jsx'
+import type { FC, Child } from 'hono/jsx'
 import { raw } from 'hono/html'
 import { Header } from './Header.js'
 import { Footer } from './Footer.js'
 
-type LayoutProps = PropsWithChildren<{ title?: string }>
+type LayoutProps = {
+  title?: string
+  children?: Child
+}
 
 export const Layout: FC<LayoutProps> = ({ title = 'AgentClinic', children }) => (
   <>

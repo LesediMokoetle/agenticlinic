@@ -1,5 +1,12 @@
-import { describe, it, expect } from 'vitest'
-import { app } from './app.js'
+import { describe, it, expect, beforeAll } from 'vitest'
+import { createApp } from './app.js'
+import { createDb } from './db.js'
+
+let app: ReturnType<typeof createApp>
+
+beforeAll(() => {
+  app = createApp(createDb(':memory:'))
+})
 
 describe('GET /', () => {
   it('returns 200', async () => {
