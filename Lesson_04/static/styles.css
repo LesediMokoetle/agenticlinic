@@ -505,3 +505,158 @@ footer {
 .appointment-detail-header h1 {
   margin-bottom: 0;
 }
+
+/* ── Dashboard ── */
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .stat-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-count {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-orange);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dashboard-section {
+  margin-top: 2rem;
+}
+
+.dashboard-section h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-black);
+  margin-bottom: 0.75rem;
+}
+
+.empty-state {
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+/* ── Activity feed ── */
+
+.activity-feed {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.activity-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.625rem 0.75rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.activity-link:hover {
+  background: #edf2f7;
+}
+
+.activity-agent {
+  font-weight: 600;
+  color: var(--brand-black);
+  flex: 1 1 auto;
+}
+
+.activity-therapist {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.activity-datetime {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+/* ── Data table ── */
+
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  font-size: 0.9rem;
+  min-width: 480px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #718096;
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th:first-child { border-radius: 0.5rem 0 0 0; }
+.data-table th:last-child  { border-radius: 0 0.5rem 0 0; }
+
+.data-table td {
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #f0f4f8;
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover td {
+  background: #f7fafc;
+}
+
+.data-table a {
+  color: var(--brand-orange);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.data-table a:hover {
+  text-decoration: underline;
+}

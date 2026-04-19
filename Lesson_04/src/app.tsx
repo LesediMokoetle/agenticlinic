@@ -5,6 +5,7 @@ import { agentsRouter } from './routes/agents.js'
 import { ailmentsRouter } from './routes/ailments.js'
 import { therapiesRouter } from './routes/therapies.js'
 import { appointmentsRouter } from './routes/appointments.js'
+import { dashboardRouter } from './routes/dashboard.js'
 import type { DB } from './db.js'
 
 export function createApp(db: DB) {
@@ -25,6 +26,7 @@ export function createApp(db: DB) {
   app.route('/ailments', ailmentsRouter(db))
   app.route('/therapies', therapiesRouter(db))
   app.route('/appointments', appointmentsRouter(db))
+  app.route('/dashboard', dashboardRouter(db))
 
   return app
 }
